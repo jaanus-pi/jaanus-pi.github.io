@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lesson2</title>
+        <meta charset="UTF-8"> <!-- Standard meta data to set uniform characters, õ ü ä ö jne -->
+    </head>
+    <body>
+        <!-- tere -->
+        <!--
+            See on suur kommentaar
+            CTRL + Z - undo
+            CTRL + Y - redo
+            CTRL + SHIFT + T - Open last closed tab
+            CTRL + TAB - Move to next tab
+            CTRL + SHIFT + TAB - Move to previous tab
+            ALT + TAB - Select between windows windows
+            Mouse 1x Click - move cursor
+            Mouse 2x Click - select word
+            Mouse 3x Click - select row
+            Mouse Middle Click - 
+                1. In browser open new tab. 
+                2. In browser close tab
+                3. In browser move window up/down
+            Home - move to start of row
+            End - move to end row
+            SHIFT + HOME/END - select to start/end
+            TAB - In Windows select next. In IDE etc, add extra space to the left.
+            SHIFT + TAB - In Windows select prev. In IDE etc, remove space from left.
+        -->
+        <!-- Heading -->
+        <!-- Only 1 H1 per page -->
+        <h1>Lesson 2</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <!-- <br> -> new line -->
+        <p>Tere tere <br>
+            Lorem ipsum dolor sit amet. Teine ridao n see. <br>
+            Kolmas rida on see
+        </p>
+        <!-- lorem100 + tab (voi ykskoik mitu sona) -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam ad harum quaerat distinctio assumenda, fuga eligendi, tenetur earum architecto pariatur libero officiis soluta, inventore esse iure porro iusto. Consequatur numquam ipsa placeat consequuntur? Ipsum voluptatum inventore quos amet delectus accusantium, reprehenderit facilis consequatur dicta et repudiandae mollitia porro vel neque perferendis velit nihil possimus itaque quas, iusto harum magnam unde officia. Fuga doloremque veniam quaerat perferendis praesentium officiis sequi. Quo voluptates ipsam, repellendus dignissimos hic iste aliquam dicta officiis quos sapiente porro totam dolor nulla at cum molestias accusantium aspernatur repudiandae. Vitae libero omnis accusamus minima, quam corporis placeat.</p>
+        <p>2x<sup>3</sup>+log<sub>2</sub>10 = 10</p>
+        <p>Siin on <i>Italic</i> tekst ning on olemas <strong>STRONG</strong> ja <b>BOLD</b></p>
+        <p>Õun on väga</p>
+        <!-- 
+            p -> Paragraph 
+            h1 -> Heading
+            <br> -> Break line
+        -->
+        <!--
+            a -> Link
+            Teal/Light Blue -> Atribute
+            Brown -> Atribute value
+            href -> Where the user will go
+            2 types of links:
+                1. External -> target="_blank"
+                2. Internal
+        -->
+        <a target="_blank" href="https://www.google.com/">Google</a> <br>
+        <a href="../Lesson1/index.html">Lesson1</a>
+        <!--
+            ol - Ordered List
+            li - List item / List element
+            ul - Unordered list
+        -->
+        <ol>
+            <li>Auto</li>
+            <li>Buss</li>
+            <li>Tõuks</li>
+        </ol>
+        <ul>
+            <li>Auto</li>
+            <li>Buss</li>
+            <li>Tõuks</li>
+        </ul>
+        <!--
+            table
+            tr -> Table Row
+            td -> Table Data
+        -->
+        <table>
+            <tr>
+                <th>Nimi</th>
+                <th>Linn</th>
+                <th>Sihtkoht</th>
+                <th>Buss nr</th>
+            </tr>
+            <tr>
+                <td>Jaanus</td>
+                <td colspan="2">Tallinn</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Mari</td>
+                <td>Rakvere</td>
+                <td>Tartu</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Toomas</td>
+                <td rowspan="2">Vilnius</td>
+                <td rowspan="2">Stockholm</td>
+                <td rowspan="2">101</td>
+            </tr>
+            <tr>
+                <td>Teet</td>
+            </tr>
+        </table>
+        <br><br>
+
+        <!--
+            img -> Image
+            src -> Where image is located
+            TIPS - Images should be no more than 3-5MB
+        -->
+        <img width="200px" src="./space.jpeg" alt="">
+        <img height="200px" src="../Lesson1/space2.jpeg" alt="">
+        <img height="150px" width="200px" src="https://starwalk.space/gallery/images/what-is-space/1140x641.jpg" alt="">
+
+        <!-- 
+            iframe -> Add extra video/page to your site
+        -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wn-VdZ4LEKg?si=GSS93EfU3LZGuA5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="500" height="500" src="https://jaanus-pi.github.io/Lesson1/" frameborder="0"></iframe>
+
+        <!-- 
+            GET - info is sent in URL
+            POST - Info sent in a body that is saved locally
+        -->
+        <form action="" method="">
+            <label>Username:</label>
+            <input type="text"><br>
+            <label>Password</label>
+            <input type="password"><br>
+            <input type="submit">
+        </form>
+
+        <br><br>
+
+    </body>
+</html>
