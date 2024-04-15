@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    background-color: brown;
+    padding: 5px;
+}
+
+.container > div,
+.pageContainer > div,
+.gContainer > div {
+    width: 50px;
+    line-height: 30px;
+    background-color: gray;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+.flexdir {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.align {
+    height: 300px;
+    flex-wrap: wrap;
+    /* NB, if we use Align we need to set height */
+    /*align-items: center;*/
+}
+
+.alignItemCenter {
+    align-items: center;
+}
+
+.alignItemStart {
+    align-items: start;
+}
+
+.alignItemEnd {
+    align-items: end;
+}
+
+.alignContentCenter {
+    align-content: center;
+}
+
+.alignContentStart {
+    align-content: start;
+}
+
+.alignContentEnd {
+    align-content: end;
+}
+
+.alignContentSpaceBetween {
+    align-content: space-between;
+}
+
+.alignContentSpaceBetween {
+    align-content: space-evenly;
+}
+
+.alignContentSpaceBetween {
+    align-content: space-around;
+}
+
+.justify {
+    flex-wrap: wrap;
+}
+
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.justifyContentStart {
+    justify-content: start;
+}
+
+.justifyContentEnd {
+    justify-content: end;
+}
+
+.justifyContentSpaceBetween {
+    justify-content: space-between;
+}
+
+.justifyContentSpaceAround {
+    justify-content: space-around;
+}
+
+.justifyContentSpaceEvenly {
+    justify-content: space-evenly;
+}
+
+.order1 > div:nth-child(1) {
+    order: 2;
+}
+
+
+.order1 > div:nth-child(1) {
+    order: 1;
+}
+
+.order1 > div:nth-child(3) {
+    order: 3;
+}
+
+.order1 > div:nth-child(4) {
+    order: 4;
+}
+
+.pageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /*row-gap: 50px;*/
+    /*column-gap: 10px;*/
+    gap: 5px;
+}
+
+.pageContainer > div:nth-child(1),
+.pageContainer > div:last-child {
+    width: 100%;
+}
+
+.pageContainer > div:nth-child(2) {
+    flex: 3;
+}
+
+
+.pageContainer > div:nth-child(3) {
+    flex: 1;
+}
+
+.grow > div {
+    border: 1px solid red;
+}
+
+.grow > div:nth-child(1) {
+    flex-grow: 2;
+}
+.grow > div:nth-child(2) {
+    flex-grow: 1;
+}
+.grow > div:nth-child(3) {
+    flex-grow: 1;
+}
+.grow > div:nth-child(4) {
+    flex-grow: 1;
+}
+
+/* IF */
+@media screen and (max-width: 450px) {
+    .pageContainer {
+        flex-direction: column;
+    }
+
+    .pageContainer > div:nth-child(2), .pageContainer > div:nth-child(3) {
+        width: 100%;
+    }
+    
+    .pageContainer > div:first {
+        order: 1;
+    }
+
+    .pageContainer > div:last-child {
+        order: 4;
+    }
+
+    .pageContainer > div:nth-child(2) {
+        order: 3;
+    }
+
+    .pageContainer > div:nth-child(3) {
+        order: 2;
+    }
+}
+
+.paraTest > span {
+    color: red;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 500px) {
+    .paraTest > span:first-child {
+        color: green;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .paraTest > span:nth-child(2) {
+        font-size: 50px;
+    }
+}
+
+.gContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    background-color: brown;
+    padding: 5px;
+}
+
+.gAlignCenter {
+    height: 500px;
+    align-content: center;
+}
+
+.gJustifyCenter {
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+}

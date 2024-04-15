@@ -1,0 +1,161 @@
+/*
+Element {
+    atribute: value;
+}
+*/
+
+p {
+    font-size: large;
+    color: blueviolet;
+}
+
+h1 {
+    color: blue;
+}
+
+/*
+    comment
+*/
+
+/* 
+    Class
+    Unique name
+    use with "." 
+*/
+
+.bolded-paragraph {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.black-paragraph {
+    color: black;
+}
+
+/* 
+    ID
+    Unique name
+    use with "#"
+    use only once 
+*/
+#para3-id {
+    margin-top: 50px;
+}
+
+#para5-id {
+    margin-top: 50px;
+}
+
+.div1 {
+    background-color: gray;
+    width: 500px;
+    height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 10px dotted red;
+    margin: 30px;
+}
+
+.div2 {
+    background-color: black;
+    height: 18px;
+    margin-bottom: 100px;
+}
+
+.div3, .div4, .div5, .div6, .div7 {
+    height: 50px;
+    background-color: violet;
+    margin-bottom: 5px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.div3, .div4 {
+    left: 50px;
+}
+
+.div3 {
+    position: static;
+}
+
+.div4 {
+    position: relative;
+}
+
+.div5 {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    background-color: aqua;
+}
+
+.div6 {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.div7 {
+    position: relative;
+    z-index: -1;
+}
+
+.overIMG {
+    color: white;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.overIMG2 {
+    background-image: url("../../Lesson2/space.jpeg");
+    line-height: 200px;
+    text-align: center;
+    background-size: cover;
+}
+
+.overIMGPara {
+    text-shadow: 6px 4px 7px rgb(0, 0, 0 / 90%);
+    color: white;
+    font-size: 70px;
+}
+
+.colors {
+    /* background-color: red; By color name */
+    /*
+        R - Red
+        G - Green
+        B - Blue 
+    */
+    background-color: black;
+    color: rgba(0, 255, 255, 0.5);
+    color: #1100ff;
+}
+
+.extra-para {
+    margin-bottom: 50px;
+}
+
+p.extra-para {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4.extra-para {
+    font-family: cursive;
+}
+
+.extra-para > span {
+    font-size: 50px;
+}
+
+.extra-para > span.extra1 {
+    font-size: 30px;
+}
+
+.multipara > p {
+    color: blue;
+}
+
+.multipara > p:nth-child(2n) {
+    color: red;
+}
