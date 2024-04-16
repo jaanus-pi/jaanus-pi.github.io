@@ -1,0 +1,33 @@
+.btn-primary {
+    --bs-btn-bg: aqua;
+}
+
+.customSpan:hover {
+    color: red;
+}
+
+.customSpan:active {
+    color: green;
+}
+
+.customSpan:visited {
+    color: violet;
+}
+
+.container > div {
+    line-height: 30px;
+    background-color: gray;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.containerCustom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.carousel-item > img {
+    height: 250px;
+}
