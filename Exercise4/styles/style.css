@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    background-color: aquamarine;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 15px;
+    background-color: gray;
+}
+
+.image {
+    width: 300px;
+    height: 500px;
+    line-height: 200px;
+    text-align: center;
+    background-size: cover;
+    box-shadow: 0px 0px 4px #000000;
+    background-position: center;
+}
+
+.text-and-image-1 {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1000%2F1*ac3i0wBER2lBquBaOGEcsQ.jpeg&f=1&nofb=1&ipt=e28ab10c582624ea472b785f3dffb77c9965b9acd181aff3bdc55160f45a1029&ipo=images");
+}
+
+.text-and-image-2 {
+    background-image: url("https://www.elegantthemes.com/blog/wp-content/uploads/2023/06/What-is-AI-1.jpg");
+}
+
+.text-and-image-3 {
+    background-image: url("https://imageio.forbes.com/specials-images/imageserve/64b5825a5b9b4d3225e9bd15/artificial-intelligence--ai/960x0.jpg?format=jpg&width=960");
+}
+
+.text-over-image {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 4px #000000;
+    color: #ffffff;
+    position: relative;
+    top: 100px;
+}
+
+.link-over-image {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    box-shadow: 0px 0px 4px #000000;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    top: 60px;
+    right: 100px;
+    border-radius: 3px;
+}
+
+.link-over-image:hover {
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 0px 0px 10px #fefefe;
+}
+
+@media screen and (max-width: 1280px) {
+    .link-over-image {
+        top: 0px;
+        right: 0px;
+    }
+    .image {
+        width: auto;
+    }
+}
