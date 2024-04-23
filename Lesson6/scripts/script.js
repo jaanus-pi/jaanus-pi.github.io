@@ -205,3 +205,11 @@ while(true) {
     Lisa kui on aega
         Kuvada ainult need mis ei ole ostetud
 */
+
+console.log(`Name: ${finalStudents[0].Name}, Age: ${finalStudents[0].Age}`)
+
+console.log("Vanus: " + finalStudents[0].Name ? "0 on Toomas" : "0 ei ole Toomas")
+
+/*
+    if loogika ? "IF TRUE" : "IF FALSE"
+*/
