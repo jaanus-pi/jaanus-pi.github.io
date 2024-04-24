@@ -79,4 +79,4 @@ function Restart() {
     NewGame();
 }
 
-// Anda kasutajale valik kas ainult liitmised voi ainult lahutamised?
+// Anda kasutajale valik kas ainult liitmised, ainult lahutamised voi molemad?
