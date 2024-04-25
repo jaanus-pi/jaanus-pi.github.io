@@ -9,7 +9,6 @@
     <body>
         <h1>Javascript 2</h1>
 
-
         <div class="mb-3">
             <label for="userName" class="form-label">Name</label>
             <input type="text" class="form-control" id="userName">
@@ -28,6 +27,7 @@
             <input onchange="guessChanged()" type="number" class="form-control" id="guessedNumber">
             <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
         </div>
+        <p>Lives: <span id="lives"></span></p>
         <p>Remaining answers: <span id="remainingAnsw"></span></p>
         <div class="container">
             <div class="row">
@@ -42,7 +42,7 @@
                 <button onclick="GuessNumber()" class="btn btn-primary" disabled id="guessBtn">Guess</button>
               </div>
             </div>
-          </div>
+        </div>
         
         <button id="restartBtn" onclick="Restart()" class="btn btn-secondary" style="display: none;">Restart</button>
         <br><br><br>

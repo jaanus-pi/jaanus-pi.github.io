@@ -13,6 +13,9 @@ let random2 = 0;
 let answers = [];
 let pastEquasion = [];
 
+let lives = 5;
+let livesEl = document.getElementById("lives");
+
 NewGame();
 
 // Functions
@@ -73,6 +76,8 @@ function NewGame() {
     generatedNumberEl.innerHTML = generatedEquasion;
     remainingAnswEl.innerHTML = maxEquasion - pastEquasion.length;
 
+    DisplayLives();
+
     // Reset Style
     guessedNumber.classList.remove("wrong");
     guessedNumber.classList.remove("correct");
@@ -86,6 +91,32 @@ function NewGame() {
         ShowPastAnswers();
     }*/
     
+}
+
+function DisplayLives() {
+    if (lives > 0) {
+        livesEl.innerHTML = lives;
+    } else {
+        livesEl.innerHTML = "0 - GAME OVER";
+    }
+}
+
+// function DecreaseLives() {
+//     if (lives > 1) {
+//         lives--;
+//     } else {
+//         lives--;
+//         GameOver();
+//     }
+// }
+
+function GameOver() {
+    alert("No lives left. GAME OVER.");
+    guessedNumber.disabled = true;
+    guessBtn.disabled = true;
+    guessedNumber.classList.add("wrong");
+    DisplayLives();
+    ShowPastAnswers();
 }
 
 function WinPopUp() {
@@ -102,6 +133,7 @@ function LostPopUp() {
     if (confirm("Try again?")) {
         guessedNumber.value = "";
         answerEl.innerHTML = "X"; 
+        DisplayLives();
     } else {
         Restart(true);
     }
@@ -123,12 +155,16 @@ function GuessNumber() {
         guessedNumber.classList.add("correct");
         WinPopUp();
         //location.reload();
-    } else {
+    } else if (lives > 1) {
         /*answerEl.innerHTML = correctAnsw;
         guessedNumber.classList.remove("correct");
         guessedNumber.classList.add("wrong");*/
+        lives--;
         LostPopUp();
-    }   
+    } else {
+        lives--;
+        GameOver();
+    }
 
     //restartBtn.style.display = "block";
     //guessBtn.style.display = "none";
@@ -201,6 +237,29 @@ function ShowPastAnswers() {
 
 // TO-DO
 /*
+    Show if correct or wrong
+        Correct - Green
+        Wrong - Red
+        Input must change color
+    Div 2 numbers
+        Both sum and div should be
+    If Correct Refrersh the page - No good
+    Extra button to start again
+        Method 1 - Extra button "Restart"
+        Method 2 - hide and show buttons
+    No repeating Equasion
+    Limit to answers
+    Save progress
+        Show to user past answers
+    
+    After Correct answer a small popup "Continue playing?"
+        Ok - next Equasion
+        Cancel - show ansers
+    Incorrect answer a small popup "Try again?" / "Are you sure" button
+        Ok - Anser again
+        Cancel - next Equasion
+    User has a choice to have only + or - or both
+
     HomeWork
         Easy - Remaining Lives 
             Max 5
@@ -209,4 +268,7 @@ function ShowPastAnswers() {
         Hard - Time Limit
             Progress bar fills 100% then -1 life
         Hard - Progress bar starts after first answer
+    
+
+    ....
 */
