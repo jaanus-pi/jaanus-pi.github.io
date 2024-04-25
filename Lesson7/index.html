@@ -28,6 +28,9 @@
             <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
         </div>
         <p>Lives: <span id="lives"></span></p>
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div id="prog" class="progress-bar"></div>
+        </div>
         <p>Remaining answers: <span id="remainingAnsw"></span></p>
         <div class="container">
             <div class="row">
@@ -46,6 +49,8 @@
         
         <button id="restartBtn" onclick="Restart()" class="btn btn-secondary" style="display: none;">Restart</button>
         <br><br><br>
+
+        <button class="btn btn-primary" onclick="StartGame()">START NEW GAME</button>
         <h2>Previous Answers</h2>
         <div id="pastAnswer"></div>
 

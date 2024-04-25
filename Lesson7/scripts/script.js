@@ -15,8 +15,9 @@ let pastEquasion = [];
 
 let lives = 5;
 let livesEl = document.getElementById("lives");
+let timerInterval;
 
-NewGame();
+// NewGame();
 
 // Functions
 function OnSubmit() {
@@ -28,17 +29,18 @@ function Sum2Numbers(num1, num2) {
     return num1 + num2;
 }
 
-Sum2Numbers(1, 1);
-Sum2Numbers(5, 6);
-Sum2Numbers(7, 10);
-
 function Div2Numbers(num1, num2) {
     return num1 - num2;
 }
 
-//console.log(`1 - 1 = ` + Div2Numbers(1, 1));
-//console.log(`5 - 6 = ` + Div2Numbers(5, 6));
-//console.log(`7 - 10 = ` + Div2Numbers(7, 10));
+function StartGame() {
+    lives = 5;
+    pastEquasion = [];
+    NewGame();
+    if (!timerInterval) {
+        Timer();
+    }
+}
 
 function GenerateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -46,6 +48,30 @@ function GenerateRandomNumber(min, max) {
 
 function SelectorChanged() {
     Restart(false);
+}
+
+function Timer() {
+    let counter = 0;
+    timerInterval = setInterval(function() {
+        var x = document.getElementById("prog");
+        x.style.width = counter  + "%";
+        counter++;
+        if(counter >= 100) {
+            lives--;
+            DisplayLives();
+            counter = 0;
+        }
+        if(lives == 0) {
+            GameOver();
+        }
+    }, 50);
+}
+
+function StopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    var x = document.getElementById("prog");
+    x.style.width = 0  + "%";
 }
 
 // Show user new numbers
@@ -68,8 +94,13 @@ function NewGame() {
             generatedEquasion = `${random1} ${isDiv ? "-" : "+"} ${random2} `;
         }
         if(pastEquasion.length >= maxEquasion) { // 0.0000001%
+            StopTimer();
             alert("You win. Reached maximum");
+            guessedNumber.disabled = true;
+            guessBtn.disabled = true;
+            guessedNumber.classList.add("correct");
             pastEquasion = [];
+            ShowPastAnswers();
             break;
         }
     }
@@ -77,6 +108,7 @@ function NewGame() {
     remainingAnswEl.innerHTML = maxEquasion - pastEquasion.length;
 
     DisplayLives();
+    // Timer();
 
     // Reset Style
     guessedNumber.classList.remove("wrong");
@@ -111,6 +143,7 @@ function DisplayLives() {
 // }
 
 function GameOver() {
+    StopTimer();
     alert("No lives left. GAME OVER.");
     guessedNumber.disabled = true;
     guessBtn.disabled = true;
@@ -123,6 +156,7 @@ function WinPopUp() {
     if (confirm("Continue playing?")) {
         Restart(true);
     } else {
+        StopTimer();
         guessedNumber.disabled = true;
         guessBtn.disabled = true;
         ShowPastAnswers();
